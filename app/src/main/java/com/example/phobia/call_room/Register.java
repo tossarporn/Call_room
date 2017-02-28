@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.jibble.simpleftp.SimpleFTP;
+import org.json.JSONObject;
 
 import java.io.File;
 
@@ -120,6 +121,7 @@ public class Register extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(Register.this, "สมัครสมาชิกสำเร็จ", Toast.LENGTH_LONG).show();
+
                     Adddata();
 
                 }
@@ -130,14 +132,14 @@ public class Register extends AppCompatActivity {
 
     }
 
-    private void Adddata() {
+    private void Adddata() { //ร้องขอการใช้โปรโตคอล port 21 ftp
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy
                     .Builder()
                     .permitAll()
                     .build();
             StrictMode.setThreadPolicy(policy);
-
+            //add image to server masterung
             SimpleFTP simpleFTP = new SimpleFTP();
             simpleFTP.connect("ftp.swiftcodingthai.com", 21,
                     "bsru@swiftcodingthai.com", "Abc12345");
@@ -145,7 +147,39 @@ public class Register extends AppCompatActivity {
             simpleFTP.cwd("img_user");
             simpleFTP.stor(new File(realPath));
             simpleFTP.disconnect();
+
+            //add text to data server
+
+            Get_data get_data = new Get_data(Register.this);
+            Myconfig myconfig = new Myconfig();
+
+            get_data.execute(myconfig.getService_register()+
+
+                    "fname="+fnameString+"&"+
+                    "lname="+lnameString+"&"+
+                    "surname="+surnameString+"&"+
+                    "tel="+telString+"&"+
+                    "user="+userString+"&"+
+                    "password="+passwordString+"&"+
+                    "path_image="+realPath
+            );
+
+            String responejson = get_data.get();
+            JSONObject jsonObject = new JSONObject(responejson);
+            Boolean status = jsonObject.getBoolean("status");
+            String message = jsonObject.getString("message");
+            if (status == true) {
+                Toast.makeText(Register.this, message, Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                Toast.makeText(Register.this, message, Toast.LENGTH_SHORT).show();
+            }
+
+
+
+
         } catch (Exception e) {
+            Toast.makeText(Register.this, e.toString(), Toast.LENGTH_LONG).show();
         }
 
     }
