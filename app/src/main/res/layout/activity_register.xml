@@ -13,12 +13,12 @@
     android:background="@drawable/teal">
 
     <ImageView
-        android:layout_width="120dp"
         android:layout_height="150dp"
         app:srcCompat="@drawable/person_icon"
         android:id="@+id/person"
         android:layout_centerInParent="false"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:layout_width="110dp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -125,17 +125,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:text="สมัครสมาชิก"
-        android:gravity="center_vertical|center_horizontal"
-        android:foregroundGravity="center_vertical|center_horizontal"
-        android:textSize="30sp"
-        android:layout_marginTop="5dp"
-        android:layout_centerHorizontal="true" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -148,7 +137,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/ok"
             android:layout_weight="1"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:background="@android:color/holo_green_light"
+            android:layout_marginRight="10dp" />
 
         <Button
             android:text="ย้อนกลับ"
@@ -156,7 +147,20 @@
             android:layout_height="wrap_content"
             android:id="@+id/back"
             android:layout_weight="1"
-            android:padding="20dp" />
+            android:padding="20dp"
+            android:background="#e6f82424" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="สมัครสมาชิก"
+        android:gravity="center_vertical|center_horizontal"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#96ffffff" />
 
 </RelativeLayout>

@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Createroom"></activity>
+        <activity android:name=".Createroom" />
+        <activity android:name=".Crateroom" />
+        <activity android:name=".Mylistroom"></activity>
     </application>
 
 </manifest>
