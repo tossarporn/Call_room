@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/darker_gray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorForegroundInverse"
+        android:gravity="center"
+        android:paddingLeft="40dp">
+
+        <TextView
+            android:text="nameroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_room"
+            android:textSize="30sp"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+</LinearLayout>

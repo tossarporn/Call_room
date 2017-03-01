@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/teal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@android:color/background_light">
+
+        <ImageView
+            app:srcCompat="@drawable/person_icon"
+            android:id="@+id/image_customer"
+            android:layout_weight="0.41"
+            android:background="#96ffffff"
+            android:layout_height="match_parent"
+            android:layout_width="50dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="เบียร์"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_customer"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:gravity="center_vertical"
+                android:textSize="24sp"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:text="0917253473"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tel_customer"
+                android:layout_weight="1"
+                android:textAlignment="gravity"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/darker_gray"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            app:srcCompat="@drawable/phone2"
+            android:id="@+id/imageView4"
+            android:layout_weight="0.44"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+</LinearLayout>

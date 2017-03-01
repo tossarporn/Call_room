@@ -8,6 +8,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.phobia.call_room.Listroom_activity">
+    tools:context="com.example.phobia.call_room.Listroom_activity"
+    android:background="@drawable/teal">
 
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:id="@+id/listroom"
+        android:layout_marginBottom="70dp" />
+
+    <Button
+        android:text="logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:background="#e6f82424" />
+
+    <Button
+        android:text="+"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insertroom"
+        android:textSize="30sp"
+        android:background="@android:color/holo_green_light" />
 </RelativeLayout>
