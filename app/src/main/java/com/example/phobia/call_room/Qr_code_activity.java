@@ -23,6 +23,12 @@ public class Qr_code_activity extends AppCompatActivity {
         datauserString = getIntent().getStringExtra("datauser");
         qrcode = (ImageView) findViewById(R.id.imageView3);
         back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

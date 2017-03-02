@@ -42,7 +42,9 @@
             android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/back" />
+            android:id="@+id/back"
+            android:background="#e6f82424"
+            android:padding="20dp" />
     </LinearLayout>
 
 </LinearLayout>

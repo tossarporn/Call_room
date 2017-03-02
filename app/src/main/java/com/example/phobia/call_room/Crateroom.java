@@ -26,6 +26,12 @@ public class Crateroom extends AppCompatActivity {
         nameEditText = (EditText) findViewById(R.id.editText3);
         okButton = (Button) findViewById(R.id.sure);
         backButton = (Button) findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         //nameroomString = nameEditText.getText().toString();
 
         okButton.setOnClickListener(new View.OnClickListener() {

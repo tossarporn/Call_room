@@ -19,7 +19,7 @@ public class Listroom_activity extends AppCompatActivity {
     private Boolean status;
     private String roomresponearrayString;
     private ListView list_roomListView;
-    private Button qrcodeButton,createroomButton;
+    private Button qrcodeButton,createroomButton,logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,13 @@ public class Listroom_activity extends AppCompatActivity {
         list_roomListView = (ListView) findViewById(R.id.listroom);
         qrcodeButton = (Button) findViewById(R.id.myqr_code);
         createroomButton = (Button) findViewById(R.id.button4);
-
+        logout = (Button) findViewById(R.id.button2);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         qrcodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
