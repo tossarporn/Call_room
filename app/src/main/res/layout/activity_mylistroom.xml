@@ -53,13 +53,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp" />
 
-        <Button
-            android:text="My_qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/qrcode"
-            android:layout_weight="1"
-            android:background="@android:color/holo_orange_light" />
     </LinearLayout>
 
 </RelativeLayout>

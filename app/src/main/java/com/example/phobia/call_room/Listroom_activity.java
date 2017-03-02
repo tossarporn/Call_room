@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,16 +19,38 @@ public class Listroom_activity extends AppCompatActivity {
     private Boolean status;
     private String roomresponearrayString;
     private ListView list_roomListView;
+    private Button qrcodeButton,createroomButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listroom_activity);
         datauserString=getIntent().getStringExtra("data_user");
         list_roomListView = (ListView) findViewById(R.id.listroom);
+        qrcodeButton = (Button) findViewById(R.id.myqr_code);
+        createroomButton = (Button) findViewById(R.id.button4);
+
+
+        qrcodeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Qr_code_activity.class);
+                intent.putExtra("datauser",datauserString);
+                startActivity(intent);
+            }
+        });
 
         try {
             JSONObject jsonObject = new JSONObject(datauserString);
             useridString = jsonObject.getString("id");
+
+            createroomButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(),Crateroom.class);
+                    intent.putExtra("userid",useridString);
+                    startActivity(intent);
+                }
+            });
 
         } catch (Exception e) {
         }
@@ -68,6 +91,7 @@ public class Listroom_activity extends AppCompatActivity {
                             intent.putExtra("roomid",idroom[i]);
                             intent.putExtra("datauser", datauserString);
                             startActivity(intent);
+
                         }
                     });
 

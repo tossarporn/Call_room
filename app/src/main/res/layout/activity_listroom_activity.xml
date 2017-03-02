@@ -27,11 +27,27 @@
         android:textSize="18sp"
         android:background="#e6f82424" />
 
-    <Button
-        android:text="+"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/insertroom"
-        android:textSize="30sp"
-        android:background="@android:color/holo_green_light" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="สร้างห้อง"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light" />
+
+        <Button
+            android:text="My_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myqr_code"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/holo_orange_light" />
+    </LinearLayout>
+
 </RelativeLayout>

@@ -23,7 +23,9 @@
         <activity android:name=".Register" />
         <activity android:name=".Crateroom" />
         <activity android:name=".Mylistroom" />
-        <activity android:name=".Listroom_activity"></activity>
+        <activity android:name=".Listroom_activity" />
+        <activity android:name=".Qr_code_activity" />
+        <activity android:name=".Show_add_user"></activity>
     </application>
 
 </manifest>
